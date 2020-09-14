@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Quicksand', sans-serif;
+	color: #212121;
+	line-height: 1.8;
+}
+* {
+    box-sizing: border-box;
+}
+a, button {
+    cursor: pointer;
+}
+a, a:hover, a:focus {
+	text-decoration: none;
+	color: #212121;
+}
+strong {
+	font-weight: 700;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin: 20px 0;
+	font-size: 14px;
+}
+table tr th {
+	font-weight: 700;
+}
+table, tr, td, th {
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 8px;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+header {
+	padding: 20px 0;
+}
+.logo {
+	display: flex;
+}
+.logo span{
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+}
+.logo img {
+	width: auto;
+	height: 30px;
+	margin-right: 8px;
+}
+.start-nav {
+	margin-left: auto;
+}
+.nav-item {
+	line-height: 30px;
+	padding: 0 15px;
+}
+.top-intro {
+	width: 100%;
+	padding: 80px;
+	text-align: center;
+	margin-top: 30px;
+	background: linear-gradient(45deg, #232955, #4c5597);
+	color: #fff;
+	border-radius: 20px;
+}
+.top-intro > h1{
+	margin-bottom: 20px;
+}
+.top-intro > p{
+	font-size: 20px;
+}
+.top-intro > a {
+	background: #fff;
+	padding: 12px 30px;
+	display: block;
+	width: fit-content;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: -o-fit-content;
+	margin: 30px auto 0;
+	border-radius: 8px;
+	font-weight: 700;
+	color: #242a57;
+	box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+}
+h1 {
+	font-weight: 700;
+	font-size: 26px;
+}
+h2 {
+	font-weight: 700;
+	font-size: 23px;
+}
+section {
+	margin-bottom: 80px;
+}
+pre {
+	margin: 20px 0 !important;
+}
+.example-label {
+	margin: 20px 0;
+	display: block;
+	font-weight: 700;
+}
+.wrapper {
+	background-color: #f5f2f0;
+}
+.wrapper2 {
+	height: 120px;
+}
+.box {
+	line-height: 60px;
+	font-size: 14px;
+	background-color: #e18c41;
+	color: #fff;
+	text-align: center;
+	border: 2px solid #bf6f29;
+}
+.divider {
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #ececec;
+	margin: 70px 0;
+}
+.mb {
+	margin-bottom: 30px;
+}
+footer {
+	background-color: #212121;
+	color: #eaeaea;
+	font-size: 13px;
+	padding: 10px 0;
+}
+footer a{
+	color: #fff;
+	font-weight: 700;
+}
+footer a:hover{
+	color: #fff;
+}

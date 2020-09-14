@@ -1,11 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
 <head>
+    <title>Solid Flex | Ultra light-weight CSS Grid Library</title>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=robots content="index,follow">
+    <meta name="description"
+        content="Solid Flex CSS, ultra light-weight (<6KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
+    <meta name="author" content="Solid Flex">
+    <link rel="canonical" href="https://solid-flex.github.io/">
+    <meta name="subject" content="Solid Flex CSS Library">
+    <meta name='Classification' content='Business'>
+    <meta name='url' content='https://solid-flex.github.io/'>
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+    <meta http-equiv='x-dns-prefetch-control' content='off'>
+
+    <meta property="og:title" content="Solid Flex | Ultra light-weight CSS Grid Library" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://solid-flex.github.io/" />
+    <meta property="og:image" content="IMAGE_TO_USE" />
+    <meta property="og:description"
+        content="Solid Flex CSS, ultra light-weight (<6KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
+    <meta property="og:site_name" content="Solid Flex" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css">
+    <link rel="stylesheet" href="assets/css/solid-flex.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
 </head>
+
 <body>
-    <h2>Solid Flex</h2>
+    <header>
+        <div class="container">
+            <nav role="navigation" class="r">
+                <a href="https://solid-flex.github.io/" class="logo">
+                    <img src="assets/image/Subtract.svg" alt="Solid Flex CSS Library" title="Solid Flex CSS Library">
+                    <span>SOLID FLEX</span>
+                </a>
+                <a href="#getting-started" class="start-nav nav-item">Getting Started</a>
+                <a href="#how-to-use" class="nav-item">How to Use</a>
+                <a href="#reference" class="nav-item">Reference</a>
+                <a href="#" class="nav-item">Github</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="top-intro">
+                <h1>Ultra Light-weight CSS Grid Library using Flex</h1>
+                <p>
+                    <strong>Solid Flex</strong> is a Flex-based UI library that fully controls grid layouts in a web
+                    page.
+                    It is very easy to use and does not require <strong>CSS Flex</strong> knowledge.
+                </p>
+                <a href="#getting-started">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="getting-started">
+        <div class="container">
+            <h2>Getting Started</h2>
+            <p>
+                <strong>Solid Flex</strong> Usage is very simple.</br>
+                To use, simply insert the original <strong>Solid Flex</strong> css file into the head tag of your html
+                file.
+            </p>
+            <pre><code class="language-html">&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.com/solid-flex/solid-flex.min.css"></code></pre>
+            <p>
+                Aafter that, you can use responsive attributes whenever you want.</br>
+            </p>
+            <span class="example-label">Example:</span>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r">
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">1&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">2&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">3&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </section>
+
+
+    <section id="how-to-use">
+        <div class="container">
+            <h2>How to Use</h2>
+            <p>
+                Every row should have a parent element with <code class="language-markup">class="r"</code>.</br>
+                In that element you can put your columns directly.</br>
+                <strong>Solid Flex</strong> use custom HTML attributes to handle grid columns in defferent device sizes.
+                It is important to know that the <strong>Solid Flex</strong> consists of 24 units.
+                For example, When you set value of <strong>12</strong> to each size it equals to <strong>50%</strong>.
+            </p>
+            <table>
+                <tr>
+                    <th>Size Name</th>
+                    <th>X-Large Size (xl)</th>
+                    <th>Large Size (lg)</th>
+                    <th>Medium Size (md)</th>
+                    <th>Small Size (sm)</th>
+                    <th>Extra-Small Size (xs)</th>
+                </tr>
+                <tr>
+                    <td>Device Width Limit</td>
+                    <td>>1200</td>
+                    <td>&lt;1200</td>
+                    <td>&lt;992</td>
+                    <td>&lt;768</td>
+                    <td>&lt;576</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <section id="reference">
+        <div class="container">
+            <h2>Reference</h2>
+            <p>Change your browser width to see responsive effect of <strong>Solid Flex</strong>.</p></br>
+
+            <span class="example-label">Basic Usage:</span>
+            <div class="r wrapper">
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+                <div class="box" xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r">
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                        &lt;div xl="4" lg="6" md="8" sm="12" xs="24">One of Six Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+
+            <span class="divider"></span>
+
+            <span class="example-label">Not Fill:</span>
+            <div class="r wrapper">
+                <div class="box" xl="4">One of Two Columns</div>
+                <div class="box" xl="4">One of Two Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r">
+                        &lt;div xl="4">One of Two Columns&lt;/div>
+                        &lt;div xl="4">One of Two Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+
+            <span class="divider"></span>
+
+
+            <span class="example-label">Desired Column Numbers:</span>
+            <p class="mb">
+                When you need to put all columns in one row, you should use <code class="language-markup">rn</code> class for parent instead of <code class="language-markup">r</code> class.</br>
+                In this case <strong>Solid Flex</strong> will put all child elements of that parent into one row automatically. Also row width will be evenly divided between columns.</br>
+                It can be very useful for special grid systems (like one-fifth, One-seventh and etc.)
+            </p>
+            <div class="rn wrapper">
+                <div class="box">One of Five Columns</div>
+                <div class="box">One of Five Columns</div>
+                <div class="box">One of Five Columns</div>
+                <div class="box">One of Five Columns</div>
+                <div class="box">One of Five Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="rn">
+                        &lt;div>One of Five Columns&lt;/div>
+                        &lt;div>One of Five Columns&lt;/div>
+                        &lt;div>One of Five Columns&lt;/div>
+                        &lt;div>One of Five Columns&lt;/div>
+                        &lt;div>One of Five Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+
+
+            <span class="divider"></span>
+
+
+
+            <span class="example-label">Desired Columns With Responsive:</span>
+            <div class="rn wrapper">
+                <div class="box" lg="8">One of Five Columns</div>
+                <div class="box" lg="8">One of Five Columns</div>
+                <div class="box" lg="8">One of Five Columns</div>
+                <div class="box" lg="8">One of Five Columns</div>
+                <div class="box" lg="8">One of Five Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="rn">
+                        &lt;div lg="8">One of Five Columns&lt;/div>
+                        &lt;div lg="8">One of Five Columns&lt;/div>
+                        &lt;div lg="8">One of Five Columns&lt;/div>
+                        &lt;div lg="8">One of Five Columns&lt;/div>
+                        &lt;div lg="8">One of Five Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+
+            <span class="example-label">Horizontally Justify of Elements:</span>
+            <p class="mb">
+                If you want to justify elements in a row you can use <strong>Solid Flex</strong> custom attributs.</br>
+                For horizontal justify you can use below attribues :
+            </p>
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Equals to</th>
+                    <th>What does it do?</th>
+                </tr>
+                <tr>
+                    <td>sb</td>
+                    <td>space-between</td>
+                    <td>
+                        <p>
+                            make space between columns evenly.<br>
+                            First and last column will stick to row sides.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>sa</td>
+                    <td>space-around</td>
+                    <td>
+                        <p>
+                            make space between columns evenly.<br>
+                            Left and right margin of each element are equal.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>se</td>
+                    <td>space-evenly</td>
+                    <td>
+                        <p>
+                            make space between columns evenly.<br>
+                            Space between first and last column with row sides are equal to space between other elements.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>end</td>
+                    <td>flex-end</td>
+                    <td>elements will stick to right side of row</td>
+                </tr>
+                <tr>
+                    <td>start</td>
+                    <td>flex-start</td>
+                    <td>elements will stick to left side of row</td>
+                </tr>
+            </table>
+            <span class="example-label">Examples:</span>
+
+            <div class="r wrapper" sb>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" sb>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+            <div class="r wrapper" sa>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" sa>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+            <div class="r wrapper" se>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" se>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+            <div class="r wrapper" end>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" end>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+            <div class="r wrapper" start>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+                <div class="box" xl="4">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" start>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                        &lt;div xl="4">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+
+
+
+            <span class="example-label">Vertically Alignment of Elements:</span>
+            <p class="mb">
+                If you want to align your elements vertically, you can use <strong>Solid Flex</strong> custom attributes too.
+            </p>
+
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Equals to</th>
+                    <th>What does it do?</th>
+                </tr>
+                <tr>
+                    <td>a-start</td>
+                    <td>flex-start</td>
+                    <td>
+                        <p>
+                            Stick elements to top of the row.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>a-end</td>
+                    <td>flex-end</td>
+                    <td>
+                        <p>
+                            Stick elements to bottom of the row.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>a-center</td>
+                    <td>center</td>
+                    <td>
+                        <p>
+                            Align element in center of the row (verticaly)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>stretch</td>
+                    <td>stretch</td>
+                    <td>
+                        <p>
+                            Stretch elements to fill height of the row.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+
+            <div class="r wrapper wrapper2" a-start>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" a-start>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+            <div class="r wrapper wrapper2" a-end>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" a-end>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+            <div class="r wrapper wrapper2" stretch>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" stretch>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+            <span class="divider"></span>
+
+            <div class="r wrapper wrapper2" a-center>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+                <div class="box" xl="8">One of Three Columns</div>
+            </div>
+            <pre>
+                <code class="language-html">
+                    &lt;div class="r" a-center>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                        &lt;div xl="8">One of Three Columns&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-copyright">
+                All Rights Reserved By
+                <a href="https://solid-flex.github.io/">Solid Flex</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script type="text/javascript">
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true,
+        });
+    </script>
 </body>
+
 </html>
