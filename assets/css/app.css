@@ -1,31 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1;
 	font-family: 'Quicksand', sans-serif;
 	color: #212121;
 	line-height: 1.8;
@@ -43,20 +18,8 @@ a, a:hover, a:focus {
 strong {
 	font-weight: 700;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
 	width: 100%;
 	margin: 20px 0;
 	font-size: 14px;
@@ -79,6 +42,7 @@ header {
 }
 .logo {
 	display: flex;
+	float: left;
 }
 .logo span{
 	font-weight: 500;
@@ -180,4 +144,107 @@ footer a{
 }
 footer a:hover{
 	color: #fff;
+}
+.mobile-menu {
+	display: none;
+	position: relative;
+	margin-left: auto;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+.mobile-menu > span{
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: #212121;
+	right: 0;
+	border-radius: 2px;
+}
+.mobile-menu > span:nth-child(1){
+	top: 0;
+}
+.mobile-menu > span:nth-child(2){
+	top: 6px;
+}
+.mobile-menu > span:nth-child(3){
+	top: 12px;
+}
+pre[class*="language-"] {
+	z-index: 1;
+	position: relative;
+}
+
+
+@media only screen and (max-width: 1200px) {
+	.container {
+		width: 992px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.container {
+		width: 768px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 576px;
+	}
+	nav {
+		position: fixed;
+		left: -240px;
+		top: 0;
+		height: 100%;
+		width: 240px;
+		background-color: #212121;
+		flex-direction: column;
+		padding-top: 30px;
+		transition: all 0.2s ease-in-out;
+		z-index: 999;
+	}
+	nav.active {
+		left: 0;
+	}
+	nav > a,
+	nav > a:hover,
+	nav > a.start-nav {
+		margin: 0;
+		color: #fff;
+		padding: 8px 20px !important;
+	}
+	.mobile-menu {
+		display: inherit;
+	}
+	.top-intro > h1 {
+		font-size: 20px;
+	}
+	.top-intro > p {
+		font-size: 16px;
+	}
+	.table {
+		overflow: hidden;
+	}
+	.tablerow {
+		width: 100%;
+		overflow-x: auto;
+		position: relative;
+		z-index: 1;
+	}
+	table {
+		min-width: 768px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.container {
+		width: 100%;
+		padding: 0 10px;
+	}
+	.top-intro {
+		padding: 50px 30px; 
+	}
 }

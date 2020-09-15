@@ -7,8 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name=robots content="index,follow">
-    <meta name="description"
-        content="Solid Flex CSS, ultra light-weight (<6KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
+    <meta name="description" content="Solid Flex CSS, ultra light-weight (<8KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
     <meta name="author" content="Solid Flex">
     <link rel="canonical" href="https://solid-flex.github.io/">
     <meta name="subject" content="Solid Flex CSS Library">
@@ -23,10 +22,11 @@
     <meta property="og:title" content="Solid Flex | Ultra light-weight CSS Grid Library" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://solid-flex.github.io/" />
-    <meta property="og:image" content="IMAGE_TO_USE" />
-    <meta property="og:description"
-        content="Solid Flex CSS, ultra light-weight (<6KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
+    <meta property="og:image" content="https://solid-flex.github.io/assets/image/solid-flex-logo.svg" />
+    <meta property="og:description" content="Solid Flex CSS, ultra light-weight (<8KB) CSS Grid Library. Make your website flexible and fully responsive with Solid Flex">
     <meta property="og:site_name" content="Solid Flex" />
+
+    <link rel="shortcut icon" href="https://solid-flex.github.io/favicon.ico" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css">
     <link rel="stylesheet" href="assets/css/solid-flex.min.css">
@@ -36,16 +36,21 @@
 <body>
     <header>
         <div class="container">
+            <a href="https://solid-flex.github.io/" class="logo">
+                <img src="assets/image/solid-flex-logo.svg" alt="Solid Flex CSS Library" title="Solid Flex CSS Library">
+                <span>SOLID FLEX</span>
+            </a>
             <nav role="navigation" class="r">
-                <a href="https://solid-flex.github.io/" class="logo">
-                    <img src="assets/image/Subtract.svg" alt="Solid Flex CSS Library" title="Solid Flex CSS Library">
-                    <span>SOLID FLEX</span>
-                </a>
-                <a href="#getting-started" class="start-nav nav-item">Getting Started</a>
-                <a href="#how-to-use" class="nav-item">How to Use</a>
-                <a href="#reference" class="nav-item">Reference</a>
-                <a href="#" class="nav-item">Github</a>
+                <a href="#getting-started" class="start-nav nav-item" alt="Getting Started">Getting Started</a>
+                <a href="#how-to-use" class="nav-item" alt="How to Use">How to Use</a>
+                <a href="#reference" class="nav-item" alt="Reference">Reference</a>
+                <a href="https://github.com/solid-flex/solid-flex" class="nav-item" alt="Solid Flex Github Repository">Github</a>
             </nav>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -72,7 +77,7 @@
                 To use, simply insert the original <strong>Solid Flex</strong> css file into the head tag of your html
                 file.
             </p>
-            <pre><code class="language-html">&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.com/solid-flex/solid-flex.min.css"></code></pre>
+            <pre><code class="language-html">&lt;link rel="stylesheet" type="text/css" href="path/to/solid-flex.min.css"></code></pre>
             <p>
                 Aafter that, you can use responsive attributes whenever you want.</br>
             </p>
@@ -100,24 +105,28 @@
                 It is important to know that the <strong>Solid Flex</strong> consists of 24 units.
                 For example, When you set value of <strong>12</strong> to each size it equals to <strong>50%</strong>.
             </p>
-            <table>
-                <tr>
-                    <th>Size Name</th>
-                    <th>X-Large Size (xl)</th>
-                    <th>Large Size (lg)</th>
-                    <th>Medium Size (md)</th>
-                    <th>Small Size (sm)</th>
-                    <th>Extra-Small Size (xs)</th>
-                </tr>
-                <tr>
-                    <td>Device Width Limit</td>
-                    <td>>1200</td>
-                    <td>&lt;1200</td>
-                    <td>&lt;992</td>
-                    <td>&lt;768</td>
-                    <td>&lt;576</td>
-                </tr>
-            </table>
+            <div class="table">
+                <div class="tablerow">
+                    <table>
+                        <tr>
+                            <th>Size Name</th>
+                            <th>X-Large Size (xl)</th>
+                            <th>Large Size (lg)</th>
+                            <th>Medium Size (md)</th>
+                            <th>Small Size (sm)</th>
+                            <th>Extra-Small Size (xs)</th>
+                        </tr>
+                        <tr>
+                            <td>Device Width Limit</td>
+                            <td>>1200</td>
+                            <td>&lt;1200</td>
+                            <td>&lt;992</td>
+                            <td>&lt;768</td>
+                            <td>&lt;576</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -226,53 +235,57 @@
                 If you want to justify elements in a row you can use <strong>Solid Flex</strong> custom attributs.</br>
                 For horizontal justify you can use below attribues :
             </p>
-            <table>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Equals to</th>
-                    <th>What does it do?</th>
-                </tr>
-                <tr>
-                    <td>sb</td>
-                    <td>space-between</td>
-                    <td>
-                        <p>
-                            make space between columns evenly.<br>
-                            First and last column will stick to row sides.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>sa</td>
-                    <td>space-around</td>
-                    <td>
-                        <p>
-                            make space between columns evenly.<br>
-                            Left and right margin of each element are equal.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>se</td>
-                    <td>space-evenly</td>
-                    <td>
-                        <p>
-                            make space between columns evenly.<br>
-                            Space between first and last column with row sides are equal to space between other elements.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>end</td>
-                    <td>flex-end</td>
-                    <td>elements will stick to right side of row</td>
-                </tr>
-                <tr>
-                    <td>start</td>
-                    <td>flex-start</td>
-                    <td>elements will stick to left side of row</td>
-                </tr>
-            </table>
+            <div class="table">
+                <div class="tablerow">
+                    <table>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Equals to</th>
+                            <th>What does it do?</th>
+                        </tr>
+                        <tr>
+                            <td>sb</td>
+                            <td>space-between</td>
+                            <td>
+                                <p>
+                                    make space between columns evenly.<br>
+                                    First and last column will stick to row sides.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>sa</td>
+                            <td>space-around</td>
+                            <td>
+                                <p>
+                                    make space between columns evenly.<br>
+                                    Left and right margin of each element are equal.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>se</td>
+                            <td>space-evenly</td>
+                            <td>
+                                <p>
+                                    make space between columns evenly.<br>
+                                    Space between first and last column with row sides are equal to space between other elements.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>end</td>
+                            <td>flex-end</td>
+                            <td>elements will stick to right side of row</td>
+                        </tr>
+                        <tr>
+                            <td>start</td>
+                            <td>flex-start</td>
+                            <td>elements will stick to left side of row</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <span class="example-label">Examples:</span>
 
             <div class="r wrapper" sb>
@@ -367,49 +380,53 @@
                 If you want to align your elements vertically, you can use <strong>Solid Flex</strong> custom attributes too.
             </p>
 
-            <table>
-                <tr>
-                    <th>Attribute</th>
-                    <th>Equals to</th>
-                    <th>What does it do?</th>
-                </tr>
-                <tr>
-                    <td>a-start</td>
-                    <td>flex-start</td>
-                    <td>
-                        <p>
-                            Stick elements to top of the row.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>a-end</td>
-                    <td>flex-end</td>
-                    <td>
-                        <p>
-                            Stick elements to bottom of the row.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>a-center</td>
-                    <td>center</td>
-                    <td>
-                        <p>
-                            Align element in center of the row (verticaly)
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>stretch</td>
-                    <td>stretch</td>
-                    <td>
-                        <p>
-                            Stretch elements to fill height of the row.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+            <div class="table">
+                <div class="tablerow">
+                    <table>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Equals to</th>
+                            <th>What does it do?</th>
+                        </tr>
+                        <tr>
+                            <td>a-start</td>
+                            <td>flex-start</td>
+                            <td>
+                                <p>
+                                    Stick elements to top of the row.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>a-end</td>
+                            <td>flex-end</td>
+                            <td>
+                                <p>
+                                    Stick elements to bottom of the row.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>a-center</td>
+                            <td>center</td>
+                            <td>
+                                <p>
+                                    Align element in center of the row (verticaly)
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>stretch</td>
+                            <td>stretch</td>
+                            <td>
+                                <p>
+                                    Stretch elements to fill height of the row.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
 
             <div class="r wrapper wrapper2" a-start>
@@ -493,6 +510,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
     <script type="text/javascript">
+        function toggleMobileMenu() {
+            var nav = document.querySelector('nav');
+            nav.classList.toggle("active");
+        }
+        var navItems = document.getElementsByClassName("nav-item");
+        for(var i=0;i<navItems.length;i++){
+            var thisItem = navItems[i];
+            thisItem.addEventListener('click', function(){
+                toggleMobileMenu();
+            })
+        }
+
+
         Prism.plugins.NormalizeWhitespace.setDefaults({
             'remove-trailing': true,
             'remove-indent': true,
